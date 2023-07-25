@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
-    <title>App Name: A Coding Challenge</title>
+    <title>Calculator: A Coding Challenge</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -39,7 +39,7 @@
         <div class="container-fluid">
           <a class="navbar-brand" href="/index.html">
             <img src="/img/mainLogo1.png" height="30" alt="developer logo" />
-            &nbsp;App Name</a
+            &nbsp;Calculator</a
           >
           <button
             class="navbar-toggler"
@@ -85,16 +85,43 @@
 
     <!-- START: Main -->
     <main class="container py-3">
-      <h1>APP UI GOES HERE</h1>
-      <input
-        class="form-control"
-        id="message"
-        placeholder="Enter a message"
-        type="text"
-      />
-      <button class="btn btn-primary my-3" id="btnSubmit" type="button">
-        Display Message
-      </button>
+      <h1>JavaScript Calculator</h1>
+      <div class="row row-cols-1 row-cols-md-3">
+        <div class="col">
+          <label class="form-label" for="firstNumber">First Number</label>
+          <input class="form-control" type="number" id="firstNumber" />
+        </div>
+        <div class="col">
+          <label class="form-label" for="secondNumber">Second Number</label>
+          <input class="form-control" type="number" id="secondNumber" />
+        </div>
+        <div class="col">
+          <label class="form-label" for="numberSeries">Series of Numbers</label>
+          <input class="form-control" type="number" id="numberSeries" />
+        </div>
+      </div>
+      <h5 class="mt-3">Results:</h5>
+      <div
+        class="display-6 text-seccess my-3 rounded-3 border border-2 border-success-subtle p-2 bg-body-secondary"
+      >
+        <div id="results">0</div>
+      </div>
+
+      <div class="d-flex gap-3">
+        <buttom class="btn btn-primary" onclick="add()">Add (+)</buttom>
+        <buttom class="btn btn-info" onclick="subtract()">Subtract (-)</buttom>
+        <buttom class="btn btn-warning" onclick="multiply()"
+          >Multiply (x)</buttom
+        >
+        <buttom class="btn btn-danger" onclick="divide()"
+          >Divide (&div;)</buttom
+        >
+        <buttom class="btn btn-dark" onclick="sumAll()">Sum All</buttom>
+        <buttom class="btn btn-dark" onclick="multiplyAll()">Multiply All</buttom>
+        <buttom class="btn btn-dark" onclick="minimum()">Minimun</buttom>
+        <buttom class="btn btn-dark" onclick="maximum()">Maximum</buttom>
+        <buttom class="btn btn-dark" onclick="average()">Average</buttom>
+      </div>
     </main>
     <!-- END: Main -->
 
@@ -130,11 +157,5 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="/js/site.js"></script>
-
-    <script>
-      document
-        .getElementById("btnSubmit")
-        .addEventListener("click", displayMessage);
-    </script>
   </body>
 </html>
